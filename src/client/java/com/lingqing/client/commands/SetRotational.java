@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 
 public class SetRotational {
     public static int speed = 10;
-    public static boolean rotationalSwitch = true;
+    public static boolean rotationalSwitch = false;
     public static LiteralArgumentBuilder<FabricClientCommandSource> getCommand() {
         return ClientCommandManager.literal("setRotational")
                 .then(ClientCommandManager.literal("speed")
