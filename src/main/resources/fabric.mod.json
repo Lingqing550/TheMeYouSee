@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "the-me-you-see",
+	"version": "${version}",
+	"name": "The Me You See",
+	"description": "让你觉得自己充满了暗黑能量！",
+	"authors": [
+		"Lingqing"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/the-me-you-see/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lingqing.TheMeYouSee"
+		],
+		"client": [
+			"com.lingqing.client.TheMeYouSeeClient"
+		]
+	},
+	"mixins": [
+		"the-me-you-see.mixins.json",
+		{
+			"config": "the-me-you-see.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
